@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jae's Portfolio</title>
-    <meta name="description" content="Jae's Portfolio">
-    <meta name="author" content="Jae">
-    <link rel="icon" type="images/png" href="images/favicon.png">
+    <meta name="description" content="Jae's Portfolio" />
+    <meta name="author" content="Jae" />
+    <link rel="icon" type="images/png" href="images/favicon.png" />
     <script src="https://kit.fontawesome.com/c9d79a2254.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
 
 </head>
@@ -25,16 +25,14 @@
             <i class="fab fa-diaspora"></i>
             <a herf="#">Jae Hyung Kim</a>
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">My Work</li>
-                <li class="navbar__menu__item">Testiminal</li>
-                <li class="navbar__menu__item">Contact</li>
-            </ul>
-        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My Work</li>
+            <li class="navbar__menu__item">Testiminal</li>
+            <li class="navbar__menu__item">Contact</li>
+        </ul>
 
         <!-- Toogle button-->
         <button class="navbar__toggle-button">
@@ -44,10 +42,12 @@
 
     <!-- Home -->
     <section id="home">
-        <img src="images/profile.jpg" alt="Jae's profile photo" class="home__avatar" />
-        <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
-        <h2 class="home__description">I am a Software Developer with Good Testing Skills</h2>
-        <button class="home__contact">Contact Me</button>
+        <div class="home__container">
+            <img src="images/profile.jpg" alt="Jae's profile photo" class="home__avatar" />
+            <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
+            <h2 class="home__description">I am a Software Developer with Good Testing Skills</h2>
+            <button class="home__contact">Contact Me</button>
+        </div>
     </section>
 
     <!-- About Me -->
@@ -69,43 +69,56 @@
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <div class="major__title">Front-end</div>
-                <div class="major__description">
+                <h2 class="major__title">Front-end</h2>
+                <p class="major__description">
                     HTML, CSS, JavaScript
-                </div>
+                    <!-- , TypeScript,
+                    <br />React, Vue, Web APIs-->
+                </p>
             </div>
             <div class="major">
                 <div class="major__icon">
                     <i class="fas fa-mobile"></i>
                 </div>
-                <div class="major__title">Mobile</div>
-                <div class="major__description">
-                    Studing Swift
-                </div>
+                <h2 class="major__title">Mobile</h2>
+                <p class="major__description">
+                    iOS Swift
+                    <!-- Android, iOS, React Native, Flutter,
+                    <br />Java, Swift, Kotlin -->
+                </p>
             </div>
             <div class="major">
                 <div class="major__icon">
                     <i class="fas fa-server"></i>
                 </div>
-                <div class="major__title">Back-end</div>
-                <div class="major__description">
+                <h2 class="major__title">Back-end</h2>
+                <p class="major__description">
                     Java, C#, Python
-                </div>
+                    <!--Java, JavaScript, Go, NodeJS,
+                        <br />Rest APIs, GraphGL-->
+                </p>
             </div>
         </div>
         <div class="about__jobs">
             <div class="job">
-                <img src="images/jobs/SK_Comms_Logo.png" alt="SK comms" class="job__logo" />
-                <div class="job__description">
-                    <p class="job__name">Worked at SK Communications as Test Lead</p>
-                    <p class="job__period">2007 - 2011</p>
-                </div>
-            </div>
-            <div class="job">
                 <img src="images/jobs/4csoft_logo.png" alt="4CSoft" class="job__logo" />
                 <div class="job__description">
                     <p class="job__name">Worked at 4CSoft as Software Test Manager</p>
-                    <p class="job__period">2011 - 2015</p>
+                    <p class="job__period">2011 Sep - 2016 May</p>
+                </div>
+            </div>
+            <div class="job">
+                <img src="images/jobs/wisewires.jpg" alt="WiseWiers" class="job__logo" />
+                <div class="job__description">
+                    <p class="job__name">Worked at WiseWiers as Software Test Lead</p>
+                    <p class="job__period">2011 Jun - 2011 Sep</p>
+                </div>
+            </div>
+            <div class="job">
+                <img src="images/jobs/SK_Comms_Logo.png" alt="SK comms" class="job__logo" />
+                <div class="job__description">
+                    <p class="job__name">Worked at SK Communications as Test Lead</p>
+                    <p class="job__period">2007 Oct - 2011 May</p>
                 </div>
             </div>
     </section>
@@ -211,7 +224,7 @@
             <h1>My Work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">All <span class="category__count">8</span></button>
+                <button class="category__btn selected">All <span class="category__count">8</span></button>
                 <button class="category__btn">Front-end <span class="category__count">3</span></button>
                 <button class="category__btn">Back-end <span class="category__count">3</span></button>
                 <button class="category__btn">Mobile <span class="category__count">2</span></button>
@@ -275,7 +288,8 @@
                 </a>
             </div>
         </div>
-    </section><span class="category__count"></span>
+    </section>
+
     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="section__container">
@@ -286,15 +300,10 @@
                     <img src="images/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
                     <div class="testimonial__speech-bubble">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
-                            justo
-                            commodo.
-                            Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes,
-                            nascetur ridiculus mus.
-                            Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
-                            nunc eget odio.
-                            Phasellus egestas nisi nisi, sed rutrum mauris egestas in.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                            fuga libero nulla eveniet aperiam laborum, quis provident
+                            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+                            explicabo tempora, dignissimos accusantium inventore ducimus!
                         </p>
                         <div class="name"><a href="https://github.com/mene79"><i class="fab fa-github"></i> Jae</a> /
                             Samsung
@@ -304,15 +313,10 @@
                 <div class="testimonial">
                     <div class="testimonial__speech-bubble">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
-                            justo
-                            commodo.
-                            Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes,
-                            nascetur ridiculus mus.
-                            Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien
-                            nunc eget odio.
-                            Phasellus egestas nisi nisi, sed rutrum mauris egestas in.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                            fuga libero nulla eveniet aperiam laborum, quis provident
+                            quibusdam officiis reprehenderit, placeat neque perspiciatis vero
+                            explicabo tempora, dignissimos accusantium inventore ducimus!
                         </p>
                         <div class="name"><a href="https://github.com/mene79"><i class="fab fa-github"></i> Jae</a> /
                             Samsung
@@ -328,10 +332,10 @@
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contact__email">jaehyungkim1202@gmail.com</h2>
         <div class="contact__links">
-            <a href="https://github.com/mene79" target="blank">
+            <a href="https://github.com/mene79" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/jae-hyung-kim-7067717b/" target="blank">
+            <a href="https://www.linkedin.com/in/jae-hyung-kim-7067717b/" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
@@ -339,6 +343,12 @@
             2022 Jae Hyung Kim - All rights reserved
         </p>
     </section>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 </body>
 
 </html>
