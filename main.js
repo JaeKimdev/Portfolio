@@ -24,7 +24,6 @@ navbarMenu.addEventListener(`click`, (event) => {
   navbarMenu.classList.remove("open");
   //console.log(event.target.dataset.link);
   scrollIntoView(link);
-  selectNavItem(target);
 });
 
 // Navbar toggle button for small screen
@@ -96,11 +95,6 @@ workBtnContainer.addEventListener("click", (event) => {
   }, 300);
 });
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
-
 // Take all sections and menu items
 const sectionIds = [
   "#home",
@@ -123,6 +117,12 @@ function selectNavItem(selected) {
   selectedNavItem.classList.remove("active");
   selectedNavItem = selected;
   selectedNavItem.classList.add("active");
+}
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 // Use intersectionObserver API to observe all sections
